@@ -1,6 +1,7 @@
-import React from 'react'
-import './Avatar.css'
-import defaultAvatar from './user.svg'
+import React from "react";
+import PropTypes from "prop-types";
+import "./Avatar.css";
+import defaultAvatar from "./user.svg";
 /**
  * Render a rounded user avatar
  * E.g.:
@@ -9,14 +10,19 @@ import defaultAvatar from './user.svg'
  * ```
  */
 const Avatar = props => {
-  const { src, alt } = props
+  const { src, alt } = props;
 
-  return <img src={src} className='img-avatar' alt={alt} />
-}
+  return <img src={src} className="img-avatar" alt={alt} />;
+};
 
 Avatar.defaultProps = {
   src: defaultAvatar,
-  atl: 'user avatar'
-}
+  alt: "user avatar"
+};
 
-export default Avatar
+Avatar.propTypes = {
+  alt: PropTypes.string,
+  src: PropTypes.string
+};
+
+export default Avatar;

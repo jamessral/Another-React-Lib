@@ -22,9 +22,10 @@ const Dropdown = ({
   );
 };
 
-Dropdown.propTpes = {
+Dropdown.propTypes = {
   btnText: PropTypes.string,
   menuItems: PropTypes.array.isRequired,
   onItemClick: PropTypes.func
 };
+
 export default Dropdown;

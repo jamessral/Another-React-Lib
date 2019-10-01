@@ -1,12 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import "./ProgressBar.css"
+import React from "react";
+import PropTypes from "prop-types";
+import "./ProgressBar.css";
 
-const ProgressBar = ({containerStyle, containerClassName, fillColor, progress}) => (
+const ProgressBar = ({
+  containerStyle,
+  containerClassName,
+  fillColor,
+  progress
+}) => (
   <div style={containerStyle} className={`progress-bar ${containerClassName}`}>
-    <div className='fill' style={{background: fillColor, width: `${progress}%`}}/>
+    <div
+      className="fill"
+      style={{ background: fillColor, width: `${progress}%` }}
+    />
   </div>
-)
+);
 
 ProgressBar.propTypes = {
   progress: PropTypes.number,
@@ -18,8 +26,8 @@ ProgressBar.propTypes = {
 ProgressBar.defaultProps = {
   progress: 2,
   containerStyle: {},
-  fillColor: 'red',
-  containerClassName: ''
-}
+  fillColor: "red",
+  containerClassName: ""
+};
 
 export default ProgressBar;
